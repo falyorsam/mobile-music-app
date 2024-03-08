@@ -1,19 +1,49 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import useSound from "use-sound";
 import Nav from "./assets/1-nav";
+import jeTe from "./resurses/JeTai.mp3";
 import JeTai from "./resurses/JeTai.mp3";
 function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [width, setWidth] = useState(0);
+
+  const audioRef = useRef(new Audio(jeTe));
+  const formatTime = (S) => {
+    const min = Math.floor(S / 60);
+    const remaningSec = Math.floor(S % 60);
+    const formattedTime = `${min}:${remaningSec < 10 ? "0" : ""}${remaningSec}`;
+
+    return formattedTime;
+  };
+  useEffect(() => {
+    const widthS = audioRef.current.currentTime / audioRef.current.duration;
+    console.log(Math.floor(widthS * 100));
+    setWidth(widthS * 100);
+  }, [currentTime]);
+  useEffect(() => {
+    const onTimeUpdate = () => {
+      setCurrentTime(audioRef.current.currentTime);
+    };
+
+    audioRef.current.addEventListener("timeupdate", onTimeUpdate);
+
+    return () => {
+      audioRef.current.removeEventListener("timeupdate", onTimeUpdate);
+    };
+  }, []);
+  const togglePlay = () => {
+    if (pause) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
   const [pause, setPause] = useState(false);
   const [like_1, setLike_1] = useState(false);
 
-  const handleTogglePlay = () => {
-    const song = new Audio(JeTai);
-    if (pause) {
-      song.play();
-    } else {
-      song.pause();
-    }
-  };
   const Container = () => {
     return (
       <main className="Content-container">
@@ -48,11 +78,18 @@ function App() {
         </div>
         <div className="songTimeLine">
           <div className="lineOfTheTime">
-            <div className="timeline"></div>
+            <div
+              style={{
+                width: `${width}%`,
+              }}
+              className="timeline"
+            ></div>
           </div>
           <div className="Time">
-            <div className="TimeOfSong">00:00</div>
-            <div className="TimePassOfSong">00:00</div>
+            <div className="TimeOfSong">{formatTime(currentTime)}</div>
+            <div className="TimePassOfSong">
+              {formatTime(audioRef.current.duration)}
+            </div>
           </div>
         </div>
       </main>
@@ -71,7 +108,7 @@ function App() {
 
           <div
             onClick={(e) => {
-              handleTogglePlay();
+              togglePlay();
               setPause(!pause);
               e.target.style.transform = "scale(1.05)";
 
