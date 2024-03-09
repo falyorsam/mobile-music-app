@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   font-family: "Samsung Sans", sans-serif;
   color: white;
-  background: linear-gradient(to right, #2e2e2f, rgb(111, 86, 76));
+  /* background: linear-gradient(to right, #2e2e2f, rgb(111, 86, 76)); */
 }
 .header-with-3 {
   font-size: 0.65rem;

@@ -1,0 +1,205 @@
+@import url("https://fonts.cdnfonts.com/css/samsung-sans-4");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to top, #080c0f, #1a1f6af4);
+  height: 100vh;
+  position: relative;
+  color: white;
+  font-family: "Samsung Sans", sans-serif;
+}
+.header-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+}
+
+.nav-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-5FirstContainer {
+  display: flex;
+  gap: 1rem;
+}
+.nav-5secContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sittings {
+  padding: 1rem;
+}
+.nameOfApp {
+  padding: 1rem;
+}
+
+.search {
+  padding: 1rem;
+}
+
+.pro {
+  padding: 1rem;
+}
+
+.dots {
+  padding: 1rem;
+}
+
+.nav-7 {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-7 {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  overflow: auto;
+  white-space: nowrap;
+  color: #ffffff9f;
+}
+
+.suggested {
+  padding: 0.5rem;
+}
+
+.songs {
+  padding: 0.5rem;
+  color: white;
+  border-bottom: 2px solid yellow;
+}
+
+.albums {
+  padding: 0.5rem;
+}
+
+.artists {
+  padding: 0.5rem;
+}
+.playlists {
+  padding: 0.5rem;
+}
+
+.forlders {
+  padding: 0.5rem;
+}
+
+.generes {
+  padding: 0.5rem;
+}
+
+.container {
+  margin-top: 90px;
+}
+
+.countSong-date {
+  padding: 0.35rem 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort,
+.countSong {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.songContainer {
+  align-items: center;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.songPic {
+  border-radius: 5px;
+}
+.SongText2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.songHlf {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+.songName {
+}
+
+.songInfo {
+  margin-top: 0.1rem;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.53);
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.songCreator {
+}
+
+.addTime {
+}
+
+.TimeOfSong {
+}
+
+.songSittings {
+  padding-right: 1rem;
+}
+
+.footer-2 {
+  background: linear-gradient(to right, #18191b, #18191b);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.songFooterContainer {
+}
+
+.song2Container {
+  padding: 0.8rem;
+  padding-right: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.control {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+}
+.startPause {
+}
+
+.listOfSongs {
+}
+.lineOfSong {
+  background-color: rgba(255, 255, 255, 0.64);
+}
+.secondContainerOfFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+.line {
+  width: 15%;
+  background-color: yellow;
+  padding-top: 1px;
+}
+.audio {
+}
+
+.video {
+  color: rgba(255, 255, 255, 0.556);
+}
