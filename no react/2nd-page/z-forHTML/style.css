@@ -11,6 +11,14 @@ body {
   color: white;
   font-family: "Samsung Sans", sans-serif;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+.aaa {
+  display: flex;
+  gap: 1rem;
+}
 .header-2 {
   background-color: #1a1f6a;
   position: fixed;
