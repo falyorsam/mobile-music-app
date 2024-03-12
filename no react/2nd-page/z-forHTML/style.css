@@ -20,6 +20,7 @@ a {
   gap: 1rem;
 }
 .header-2 {
+  z-index: 1;
   background-color: #1a1f6a;
   position: fixed;
   top: 0;
@@ -103,7 +104,8 @@ a {
 }
 
 .container {
-  margin-top: 90px;
+  margin-top: 7.5vh;
+  /* margin-top: 90px; */
 }
 
 .countSong-date {
@@ -211,4 +213,30 @@ a {
 
 .video {
   color: rgba(255, 255, 255, 0.556);
+}
+.sittings-sage {
+  background: linear-gradient(to right, #18191b, #18191b);
+  transform: translateY(-10000px);
+  transition: all 0.5s ease-out;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.songContainer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.181);
+  padding: 0.75rem;
+}
+.firstCon {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.181);
+}
+container .firstOne {
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.282);
+  font-size: 1.2rem;
+}
+.textFIRSTONE {
+  color: white;
+  font-size: 1rem;
 }

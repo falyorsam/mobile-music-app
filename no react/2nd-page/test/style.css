@@ -1,24 +1,179 @@
-.sittings-sage {
-  background: linear-gradient(to right, #18191b, #18191b);
-  display: none;
-  transform: translateY(-10000px);
-  transition: all 0.5s ease-out;
+.container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  height: 100vh;
+  width: 100%;
 }
-.songContainer {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.181);
-  padding: 0.75rem;
-}
-.firstCon {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.181);
-}
-.firstOne {
-  padding: 0.75rem 1rem;
+
+.pages {
+  transition: 0.5s all ease-in-out;
   display: flex;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.282);
-  font-size: 1.2rem;
+  width: 700%;
+  height: 100vh;
+  /*; Adjust based on the number of pages
+  background-color: rgb(110, 103, 93); */
+  /* transform: translateX(-14.28%); */
 }
-.textFIRSTONE {
-  color: white;
-  font-size: 1rem;
+
+.nav-7 {
+  transition: 0.5s all ease-in-out;
 }
+.nav-item2 {
+  border-bottom: 1px solid yellow;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 100vw; /* Each page takes full width of the viewport */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.navigation {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: #e9e9e9; /* Background color for active page name */
+}
+/* 
+<div class="page" id="page1">
+         
+          <main class="container">
+            <div class="sittings-sage">
+              <div class="songContainer">
+                <div class="songHlf">
+                  <a class="aaa" href="./../../index.html">
+                    <img
+                      class="songPic"
+                      src="https://picsum.photos/200"
+                      width="50px"
+                      height="50px"
+                      alt="songPic"
+                    />
+                    <div class="SongText">
+                      <div class="songName">je te lasserai des moi</div>
+                      <div class="songInfo">
+                        <div class="songCreator">casmas linx</div>
+                        <div class="addTime">7 days ago</div>
+                        <div class="TimeOfSong">3:05</div>
+                      </div>
+                    </div></a
+                  >
+                </div>
+                <div class="songSittings bro">
+                  <div class="justCeruse"></div>
+                  <i class="fa-regular fa-heart bro"></i>
+                </div>
+              </div>
+              <div class="firstCon">
+                <div class="firstOne">
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <p class="textFIRSTONE">Play Next</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-list-ul"></i>
+                  <p class="textFIRSTONE">Add to playing queue</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-circle-plus"></i>
+                  <p class="textFIRSTONE">Add to playlist</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-share"></i>
+                  <p class="textFIRSTONE">Nearby share</p>
+                </div>
+              </div>
+              <div class="firstCon">
+                <div class="firstOne">
+                  <i class="fa-solid fa-record-vinyl"></i>
+                  <p class="textFIRSTONE">Go to album</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-user"></i>
+                  <p class="textFIRSTONE">Go to list</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-brands fa-youtube"></i>
+                  <p class="textFIRSTONE">Go to artist</p>
+                </div>
+              </div>
+              <div class="firstCon">
+                <div class="firstOne">
+                  <i class="fa-solid fa-pen"></i>
+                  <p class="textFIRSTONE">Find on youtube</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <p class="textFIRSTONE">Tag editor</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-scissors"></i>
+                  <p class="textFIRSTONE">Details</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-phone"></i>
+                  <p class="textFIRSTONE">Mp3 editor</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <p class="textFIRSTONE">Add to black list</p>
+                </div>
+              </div>
+              <div class="firstCon">
+                <div class="firstOne">
+                  <i class="fa-solid fa-share-nodes"></i>
+                  <p class="textFIRSTONE">share</p>
+                </div>
+                <div class="firstOne">
+                  <i class="fa-solid fa-trash"></i>
+                  <p class="textFIRSTONE">Delete from device</p>
+                </div>
+              </div>
+            </div>
+            <div class="countSong-date">
+              <div class="countSong">29 Songs</div>
+              <div class="sort">
+                date added <i class="fa-solid fa-arrow-down"></i>
+              </div>
+            </div>
+            <div class="songContainer">
+              <div class="songHlf">
+                <a class="aaa" href="./../../index.html">
+                  <img
+                    class="songPic"
+                    src="https://picsum.photos/200"
+                    width="50px"
+                    height="50px"
+                    alt="songPic"
+                  />
+                  <div class="SongText">
+                    <div class="songName">je te lasserai des moi</div>
+                    <div class="songInfo">
+                      <div class="songCreator">casmas linx</div>
+                      <div class="addTime">7 days ago</div>
+                      <div class="TimeOfSong">3:05</div>
+                    </div>
+                  </div></a
+                >
+              </div>
+              <div class="songSittings">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+          </main>
+        
+        </div>
+      */
