@@ -3,6 +3,7 @@
   white-space: nowrap;
   height: 100vh;
   width: 100%;
+  margin-top: 1.5rem !important;
 }
 
 .pages {
@@ -12,7 +13,7 @@
   height: 100vh;
   /*; Adjust based on the number of pages
   background-color: rgb(110, 103, 93); */
-  /* transform: translateX(-14.28%); */
+  transform: translateX(-14.28%);
 }
 
 .nav-7 {
@@ -46,134 +47,276 @@
 }
 
 .nav-item.active {
-  background-color: #e9e9e9; /* Background color for active page name */
+  background-color: rgb(
+    233,
+    233,
+    233
+  ); /* Background color for active page name */
 }
-/* 
-<div class="page" id="page1">
-         
-          <main class="container">
-            <div class="sittings-sage">
-              <div class="songContainer">
-                <div class="songHlf">
-                  <a class="aaa" href="./../../index.html">
-                    <img
-                      class="songPic"
-                      src="https://picsum.photos/200"
-                      width="50px"
-                      height="50px"
-                      alt="songPic"
-                    />
-                    <div class="SongText">
-                      <div class="songName">je te lasserai des moi</div>
-                      <div class="songInfo">
-                        <div class="songCreator">casmas linx</div>
-                        <div class="addTime">7 days ago</div>
-                        <div class="TimeOfSong">3:05</div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div class="songSittings bro">
-                  <div class="justCeruse"></div>
-                  <i class="fa-regular fa-heart bro"></i>
-                </div>
-              </div>
-              <div class="firstCon">
-                <div class="firstOne">
-                  <i class="fa-solid fa-arrow-right"></i>
-                  <p class="textFIRSTONE">Play Next</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-list-ul"></i>
-                  <p class="textFIRSTONE">Add to playing queue</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-circle-plus"></i>
-                  <p class="textFIRSTONE">Add to playlist</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-share"></i>
-                  <p class="textFIRSTONE">Nearby share</p>
-                </div>
-              </div>
-              <div class="firstCon">
-                <div class="firstOne">
-                  <i class="fa-solid fa-record-vinyl"></i>
-                  <p class="textFIRSTONE">Go to album</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-user"></i>
-                  <p class="textFIRSTONE">Go to list</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-brands fa-youtube"></i>
-                  <p class="textFIRSTONE">Go to artist</p>
-                </div>
-              </div>
-              <div class="firstCon">
-                <div class="firstOne">
-                  <i class="fa-solid fa-pen"></i>
-                  <p class="textFIRSTONE">Find on youtube</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-circle-info"></i>
-                  <p class="textFIRSTONE">Tag editor</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-scissors"></i>
-                  <p class="textFIRSTONE">Details</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-phone"></i>
-                  <p class="textFIRSTONE">Mp3 editor</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-circle-minus"></i>
-                  <p class="textFIRSTONE">Add to black list</p>
-                </div>
-              </div>
-              <div class="firstCon">
-                <div class="firstOne">
-                  <i class="fa-solid fa-share-nodes"></i>
-                  <p class="textFIRSTONE">share</p>
-                </div>
-                <div class="firstOne">
-                  <i class="fa-solid fa-trash"></i>
-                  <p class="textFIRSTONE">Delete from device</p>
-                </div>
-              </div>
-            </div>
-            <div class="countSong-date">
-              <div class="countSong">29 Songs</div>
-              <div class="sort">
-                date added <i class="fa-solid fa-arrow-down"></i>
-              </div>
-            </div>
-            <div class="songContainer">
-              <div class="songHlf">
-                <a class="aaa" href="./../../index.html">
-                  <img
-                    class="songPic"
-                    src="https://picsum.photos/200"
-                    width="50px"
-                    height="50px"
-                    alt="songPic"
-                  />
-                  <div class="SongText">
-                    <div class="songName">je te lasserai des moi</div>
-                    <div class="songInfo">
-                      <div class="songCreator">casmas linx</div>
-                      <div class="addTime">7 days ago</div>
-                      <div class="TimeOfSong">3:05</div>
-                    </div>
-                  </div></a
-                >
-              </div>
-              <div class="songSittings">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-              </div>
-            </div>
-          </main>
-        
-        </div>
-      */
+.songScroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.songScroll::-webkit-scrollbar {
+  display: none;
+}
+.nav-7::-webkit-scrollbar {
+  display: none;
+}
+.musicScroll::-webkit-scrollbar {
+  display: none;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.widthFix {
+  width: 335px;
+  border-bottom: none !important;
+}
+.SSSS {
+  font-size: 0.8rem;
+}
+.MusicImg {
+  border-radius: 5px;
+}
+.musicScroll {
+  padding: 0 0.75rem;
+  gap: 1rem;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+.MusicText {
+  padding-top: 0.5rem;
+}
+/* .OneMusic {
+} */
+.GEMAI {
+  opacity: 0.1;
+  border-radius: 5px;
+}
+.GEMAI::after {
+  content: "More";
+}
+.musicBack {
+  position: relative;
+  /* text-align: center;
+  align-items: center;
+  justify-self: center;
+  display: flex;
+   */
+  background-color: black;
+  width: 98%;
+  height: 75%;
+  border-radius: 5px;
+}
+.textmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 45%;
+  right: 28%;
+  gap: 0.5rem;
+}
+.container {
+  height: 86vh;
+  overflow-y: auto;
+}
+#page1 {
+  padding-right: 0.75rem;
+}
+.t2songs {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.songPicalbum {
+  border-radius: 50%;
+}
+
+.fixSpace {
+  display: flex;
+  justify-content: start !important;
+  text-transform: capitalize;
+}
+.aaa {
+  display: flex;
+
+  align-items: center;
+}
+.playText {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.624);
+  font-size: 0.75rem;
+}
+.plus,
+.dot {
+  font-size: 1.1rem;
+}
+.plusAndDots {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+  gap: 1.5rem;
+}
+.iconMusic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  width: 110px;
+  font-size: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(to top, #404154, #474568);
+  border-radius: 50%;
+}
+.NoP {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.624);
+}
+.JustifyIcon,
+.NoP,
+.createPlaylist,
+.restorePlaylist {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.createPlaylist,
+.restorePlaylist {
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  align-items: center;
+  background: linear-gradient(to top, #1f2427, #1f2427);
+  border-radius: 10px;
+  gap: 1rem;
+  i {
+    color: rgba(255, 255, 255, 0.624);
+  }
+}
+
+.mostP {
+  width: 50%;
+}
+.towC {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.favoritesP,
+.lastA,
+.mostP,
+.recentlyP {
+  height: 120px;
+  background-color: #000000;
+  width: 100%;
+  position: relative;
+  img {
+    border: 1px solid #000000;
+    opacity: 0.25;
+    width: 100%;
+    height: 120px;
+  }
+}
+.insideSong {
+  position: absolute;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  align-items: center;
+  bottom: 0;
+  i {
+    font-size: 1rem;
+  }
+}
+.secText {
+  color: rgba(255, 255, 255, 0.624);
+  font-size: 0.6rem;
+}
+.folderss {
+  .oneFolder {
+    font-size: 0.8rem;
+    color: rgba(240, 248, 255, 0.925);
+    text-transform: capitalize;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconCon {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .SMAll-me {
+      font-size: 1.4rem;
+    }
+    .insinde {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  i {
+    font-size: 3rem;
+    color: #78779f;
+  }
+}
+#page7 {
+  padding: 1rem;
+  padding-top: 1.5rem;
+}
+.geme {
+  position: relative;
+  background-color: #000000;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  img {
+    opacity: 0.3;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  .insideTheGENE {
+    color: whitesmoke;
+    position: absolute;
+    top: 38%;
+    right: 35%;
+    div {
+      display: flex;
+      justify-content: center;
+    }
+    i {
+      font-size: 1.5rem;
+      padding-bottom: 0.4rem;
+    }
+    .show {
+      color: rgba(255, 255, 255, 0.624);
+      font-size: 0.75rem;
+    }
+  }
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
