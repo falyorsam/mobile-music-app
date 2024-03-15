@@ -7,6 +7,20 @@ const navItems4 = document.querySelector(".nav-item4");
 const navItems5 = document.querySelector(".nav-item5");
 const navItems6 = document.querySelector(".nav-item6");
 const navItems7 = document.querySelector(".nav-item7");
+const animationClick = (icon) => {
+  setTimeout(() => {
+    icon.parentElement.classList.remove("clickAnimation");
+  }, 100);
+
+  icon.parentElement.classList.add("clickAnimation");
+};
+const animationClickBar = (icon) => {
+  setTimeout(() => {
+    icon.classList.remove("clickAnimation");
+  }, 100);
+
+  icon.classList.add("clickAnimation");
+};
 navItems1.addEventListener("click", () => {
   franst(
     pages,
@@ -109,6 +123,9 @@ const franst = (
   navItem7remove,
   Moves
 ) => {
+  // animationClick(navItem1.)
+  // childElement;
+  animationClickBar(navItem1);
   pages.style.transform = `translateX(-${Moves}%)`;
 
   navItem1.style.borderBottom = "2px solid yellow";
@@ -127,15 +144,57 @@ const franst = (
   navItem6remove.style.color = "#ffffff9f";
   navItem7remove.style.color = "#ffffff9f";
 };
-// container.addEventListener("scroll", function () {
-//   const scrollPosition = container.scrollLeft;
-//   const currentPage = Math.ceil(scrollPosition / window.innerWidth);
+/////////////////////////////
+// const NavSittingsButton = document.querySelector(".insideToClick");
+const NavSittingsButton = document.querySelector(".NavSittingsButton");
+const NavUserButton = document.querySelector(".fa-user");
+const NavSearchButton = document.querySelector(".fa-magnifying-glass");
+////////////////
+NavUserButton.addEventListener("click", () => {
+  animationClick(NavUserButton);
+});
+///////////////////
+const navSittingBox = document.querySelector(".navSittingBox");
+const removeIT = document.querySelectorAll(".removeIT");
+console.log(removeIT);
+removeIT.forEach((elemnt) => {
+  elemnt.addEventListener("click", () => {
+    console.log("clicked");
+    navSittingBox.classList.remove("showBlockDown");
+  });
+});
 
-//   navItems.forEach((item, index) => {
-//     if (index === currentPage) {
-//       item.classList.add("active");
-//     } else {
-//       item.classList.remove("active");
-//     }
-//   });
-// });
+NavSittingsButton.addEventListener("click", () => {
+  navSittingBox.classList.add("showBlockDown");
+  animationClick(NavSittingsButton);
+});
+/////////////////
+NavSearchButton.addEventListener("click", () => {
+  animationClick(NavSearchButton);
+});
+////////////////nav-item1 songSittings
+const ALLSittings = document.querySelectorAll(".fa-ellipsis-vertical");
+const songSittings = document.querySelectorAll(".songSittings");
+ALLSittings.forEach((element) => {
+  element.addEventListener("click", () => {
+    console.log(element);
+    animationClickBar(element.parentElement);
+  });
+});
+///////////////////////
+const sittingsSage = document.querySelector(".sittings-sage");
+const cancelSittingsSage = document.querySelector(".cancelSittingsSage");
+cancelSittingsSage.addEventListener("click", () => {
+  sittingsSage.classList.remove("showBlock");
+});
+songSittings.forEach((element) => {
+  element.addEventListener("click", () => {
+    sittingsSage.classList.add("showBlock");
+  });
+});
+//////////////////////
+const plus = document.querySelector(".fa-plus");
+plus.addEventListener("click", () => {
+  animationClick(plus);
+});
+//////////////////////

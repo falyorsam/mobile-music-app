@@ -51,15 +51,15 @@ a {
 }
 
 .search {
-  padding: 1rem;
+  padding: 0.5rem 0rem;
 }
 
 .pro {
-  padding: 1rem;
+  padding: 0.5rem 0rem;
 }
 
 .dots {
-  padding: 1rem;
+  padding: 0.5rem 0rem;
 }
 
 .nav-7 {
@@ -215,9 +215,6 @@ a {
   color: rgba(255, 255, 255, 0.556);
 }
 .sittings-sage {
-  background: linear-gradient(to right, #18191b, #18191b);
-  transform: translateY(-10000px);
-  transition: all 0.5s ease-out;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -229,7 +226,7 @@ a {
 .firstCon {
   border-bottom: 1px solid rgba(255, 255, 255, 0.181);
 }
-container .firstOne {
+.firstOne {
   padding: 0.75rem 1rem;
   display: flex;
   gap: 1rem;
