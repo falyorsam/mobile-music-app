@@ -512,6 +512,90 @@
   align-items: center;
   border-radius: 50%;
 }
+.audioNavSideBar {
+  display: flex;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  i {
+    color: #fcfcfcaf;
+    font-size: 1.1rem;
+  }
+  .sideBar {
+    position: relative;
+    width: 225px;
+    background-color: rgb(0, 0, 0);
+    .sideBar-5 {
+      padding-top: 0.38rem;
+      .icon {
+        padding-bottom: 0.9rem;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        gap: 1rem;
+      }
+      padding-bottom: 0 !important;
+      border-bottom: 1px solid #fcfcfcaf;
+      .audiofirst {
+        padding-right: 0.75rem;
+        padding-left: 0.5rem;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        .audioTextSideBar {
+          font-weight: 800;
+        }
+        .themeAndSittings {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+  .closeSideBar {
+    background-color: #00000054;
+    padding: 4.8rem;
+  }
+}
+.pd-0 {
+  padding-top: 1rem !important;
+}
+.facebookInsta {
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .version {
+      color: #fcfcfcaf;
+      font-size: 0.7rem;
+    }
+  }
+  i {
+    font-size: 0.9rem;
+  }
+}
+.audioNavSideBar {
+  transform: translateX(-10000px);
+  transition: transform 0.25s ease-in-out;
+}
+.animationRight {
+  transform: translateX(0px) !important;
+}
+.iconRotate {
+  transition: transform 0.25s ease-in;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
 /*  */
 /*  */
 /*  */
@@ -526,4 +610,260 @@
 /*  */
 /*  */
 /*  */
-/*  */
+.search-sage {
+  background: linear-gradient(to top, #080c0f, #1a1f6a);
+  height: 100vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+.searchBar {
+  color: rgba(255, 255, 255, 0.667);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.searchsy {
+  display: flex;
+  align-items: center;
+  .divInput {
+    input {
+      box-shadow: none;
+      border: none;
+      text-shadow: none;
+      padding: 0.75rem 1rem;
+      padding-left: 2rem;
+      border-radius: 8px;
+      width: 280px;
+
+      background-color: #fcfcfc17;
+    }
+    i {
+      font-size: 0.95rem;
+    }
+    display: flex;
+    align-items: center;
+    position: relative;
+    .searchIcon {
+      position: absolute;
+      top: 23%;
+      left: 9px;
+    }
+    .micSearch {
+      position: absolute;
+      top: 25%;
+      right: 10px;
+    }
+  }
+}
+.InputSearch {
+  color: white;
+}
+.InputSearch::placeholder {
+  color: rgba(255, 255, 255, 0.652);
+}
+.profileCont {
+  color: rgba(255, 255, 255, 0.652);
+  width: 100%;
+
+  .name {
+    color: rgba(255, 255, 255, 0.652);
+    text-align: center;
+    padding-top: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    .username {
+      font-weight: 400;
+      font-size: 1rem;
+      padding-bottom: 0 !important;
+    }
+    div {
+      padding: 0.25rem 0;
+    }
+  }
+  .bio {
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem;
+  }
+}
+.cover {
+  background-color: #d4d4da;
+  height: 200px;
+  background-image: url("./../../resurses/tumblr_poh86sUujc1wpedbpo3_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.controleIt {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 222, 179, 0);
+}
+.profilePic {
+  position: relative;
+  top: -78px;
+  right: 0;
+  background-image: url("./../../resurses/dba3bd35a82cdc8d7450d6c0a0080d78.png");
+  background-position: center 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 5px solid #0f1891d9;
+}
+.achievement {
+  background-color: rgba(255, 217, 0, 0.26);
+  text-transform: uppercase;
+  padding: 1rem 5rem;
+  text-align: center;
+  color: gold;
+  font-weight: 800;
+  border: 1px solid rgba(255, 217, 0, 0.553);
+  margin: 0.25rem;
+}
+.padges {
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: gold;
+  color: rgba(0, 0, 0, 0.589);
+  justify-content: center;
+  gap: 0.75rem;
+  .iconys {
+    display: flex;
+    align-items: center;
+  }
+}
+.contsSlides {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+  .favoritSv,
+  .followingArtist,
+  .songsCreated {
+    width: 33.33%;
+    background-color: #ce2e2e;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+/*body {
+  height: fit-content !important;
+ } */
+.profile-sage {
+  transition: transform 0.5s ease-in-out;
+  background: linear-gradient(to top, #080c0f, #0f1891);
+  width: 100%;
+  position: fixed !important;
+  top: 0;
+  z-index: 3;
+  height: 100vh;
+  transform: translateY(100000px);
+  position: relative;
+}
+.closeProfile {
+  position: absolute;
+  padding: 1rem;
+}
+.profileCont {
+  height: 100vh;
+  width: 100%;
+}
+.songCreatorOnes {
+  padding: 100rem;
+  p {
+    text-align: center;
+  }
+}
+/* .showBlock.showBlock {
+  display: block;
+  transform: translateY(-0px);
+  animation: blockAnimationsUp 0.25s;
+} */
+.showBlockProfile {
+  transform: translateY(0px) !important;
+}
+
+.closeSeeAll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.closeSeeAll {
+  padding: 1rem 0.5rem;
+}
+.dotsee,
+.closeAll {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.albumPics-4 {
+  border-radius: 8px;
+  gap: 0;
+  display: flex;
+  height: 150px;
+  width: 150px;
+}
+.albumPics-2 {
+  img {
+    width: 75px;
+    height: 75px;
+  }
+}
+.seeAllSongInfoAndPic {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  padding-top: 0;
+  .Text {
+    font-size: 0.9rem;
+  }
+  .Time {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.582);
+  }
+}
+.playSitt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  .playAllOrShiffle {
+    border-radius: 5px;
+    background-color: #ffffff1a;
+    padding: 1rem 2.2rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.seeAllPage-sage {
+  position: fixed;
+  z-index: 2;
+  background: linear-gradient(to top, #080c0f, #1d237d);
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(10000px);
+}
+.sittings-sage {
+  z-index: 3 !important;
+}

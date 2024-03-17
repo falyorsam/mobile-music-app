@@ -150,8 +150,15 @@ const NavSittingsButton = document.querySelector(".NavSittingsButton");
 const NavUserButton = document.querySelector(".fa-user");
 const NavSearchButton = document.querySelector(".fa-magnifying-glass");
 ////////////////
+const profileSage = document.querySelector(".profile-sage");
 NavUserButton.addEventListener("click", () => {
   animationClick(NavUserButton);
+  profileSage.classList.add("showBlockProfile");
+});
+//closeProfile
+const closeProfile = document.querySelector(".closeProfile");
+closeProfile.addEventListener("click", () => {
+  profileSage.classList.remove("showBlockProfile");
 });
 ///////////////////
 const navSittingBox = document.querySelector(".navSittingBox");
@@ -197,4 +204,121 @@ const plus = document.querySelector(".fa-plus");
 plus.addEventListener("click", () => {
   animationClick(plus);
 });
-//////////////////////
+/////////////////////////////////
+//songSittings
+const closeSideBar = document.querySelector(".closeSideBar");
+
+const audioNavSideBar = document.querySelector(".audioNavSideBar");
+const sittingsI = document.querySelector(".sittings");
+sittingsI.addEventListener("click", () => {
+  audioNavSideBar.classList.add("animationRight");
+  const icon = sittingsI.children[0];
+  icon.classList.add("iconRotate");
+  icon.style.transform = "rotate(180deg)";
+});
+closeSideBar.addEventListener("click", () => {
+  console.log("close");
+  audioNavSideBar.classList.remove("animationRight");
+  const icon = sittingsI.children[0];
+  icon.style.transform = "rotate(0deg)";
+});
+///////////////////////////
+
+const barIcon = document.querySelectorAll(".icon");
+barIcon.forEach((element) => {
+  const parnt = element.parentElement;
+  element.addEventListener("click", () => {
+    setTimeout(() => {
+      element.classList.remove("clickAnimation");
+    }, 100);
+
+    element.classList.add("clickAnimation");
+  });
+});
+
+////////////////////////////////////
+const searchSage = document.querySelector(".search-sage");
+const closeSearchBar = document.querySelector(".close-searchBar");
+const searchSy = document.querySelector(".search");
+closeSearchBar.addEventListener("click", () => {
+  searchSage.style.display = "none";
+});
+searchSy.addEventListener("click", () => {
+  setTimeout(() => {
+    searchSage.style.display = "block";
+  }, 200);
+  searchSage.style.display = "none";
+});
+//
+const insideToClick_1 = document.querySelector(".insideToClick_1");
+insideToClick_1.addEventListener("click", () => {
+  setTimeout(() => {
+    insideToClick_1.classList.remove("clickAnimation");
+  }, 100);
+
+  insideToClick_1.classList.add("clickAnimation");
+});
+//
+////////////////////////////////////
+const songsCreated = document.querySelector(".songsCreated");
+console.log(songsCreated);
+const profileSlides_1 = document.querySelector(".profileSlides-1");
+songsCreated.addEventListener("click", () => {
+  profileSlides_1.innerHTML = `
+  <div class="FirstTY">
+    <div className="songCreatorOnes" style="padding:3rem;
+    text-transform: capitalize" >
+      <div className="songy" style="text-align: center">
+        no songs yet
+      </div>
+    </div>
+  </div>
+  `;
+});
+////////////////////////////////////
+const favoritSv = document.querySelector(".favoritSv");
+favoritSv.addEventListener("click", () => {
+  profileSlides_1.innerHTML = `
+  <div class="FirstTY">
+    <div className="songCreatorOnes" style="padding:3rem;
+    text-transform: capitalize" >
+      <div className="songy" style="text-align: center">
+        no favorite music
+      </div>
+    </div>
+  </div>
+  `;
+});
+////////////////////////////////////
+const followingArtist = document.querySelector(".followingArtist");
+followingArtist.addEventListener("click", () => {
+  profileSlides_1.innerHTML = `
+  <div class="FirstTY">
+    <div className="songCreatorOnes" style="padding:3rem;
+    text-transform: capitalize" >
+      <div className="songy" style="text-align: center">
+        this user doesn't follow any artist
+      </div>
+    </div>
+  </div>
+  `;
+});
+//////////////////////////////////////
+const seeALl = document.querySelectorAll(".seeALl");
+const closeAll = document.querySelector(".closeAll");
+closeAll.addEventListener("click", () => {
+  console.log(seeAllPageSage);
+  seeAllPageSage.classList.remove("showBlockProfile");
+});
+const seeAllPageSage = document.querySelector(".seeAllPage-sage");
+const dotsee = document.querySelector(".dotsee");
+seeALl.forEach((elemnt) => {
+  elemnt.addEventListener("click", () => {
+    seeAllPageSage.classList.add("showBlockProfile");
+  });
+});
+dotsee.addEventListener("click", () => {
+  sittingsSage.classList.add("showBlock");
+});
+//////////////////////////////////////
+//////////////////////////////////////
