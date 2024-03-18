@@ -321,4 +321,142 @@ dotsee.addEventListener("click", () => {
   sittingsSage.classList.add("showBlock");
 });
 //////////////////////////////////////
+const PLAYSSy = document.querySelectorAll(".PLAYSS");
+PLAYSSy.forEach((e) => {
+  e.addEventListener("click", () => {
+    seeAllPageSage.classList.add("showBlockProfile");
+  });
+});
 //////////////////////////////////////
+
+const sortTheSongs = document.querySelector(".sortTheSongs");
+const closeSort = document.querySelector(".closeSort");
+const ClickSort = document.querySelector(".ClickSort");
+const sortItBy = document.querySelectorAll(".sortItBy");
+const THESORTNAME = document.querySelector(".THESORTNAME");
+ClickSort.addEventListener("click", () => {
+  sortTheSongs.classList.add("showBlockProfile");
+});
+closeSort.addEventListener("click", () => {
+  sortTheSongs.classList.remove("showBlockProfile");
+});
+sortItBy.forEach((e) => {
+  e.addEventListener("click", () => {
+    console.log();
+    ////////////
+    if (e.classList[1] === "sortItByTitle") {
+      THESORTNAME.textContent = "Title";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByArtist") {
+      THESORTNAME.textContent = "Artist";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByAlbum") {
+      THESORTNAME.textContent = "Album";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByAlbumArtist") {
+      THESORTNAME.textContent = "Album Artist";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByComposer") {
+      THESORTNAME.textContent = "Composer";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItBySize") {
+      THESORTNAME.textContent = "Size";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByYear") {
+      THESORTNAME.textContent = "Year";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByDateAdded") {
+      THESORTNAME.textContent = "Date Added";
+      sortTheSongs.classList.remove("showBlockProfile");
+    } else if (e.classList[1] === "sortItByDateModified") {
+      THESORTNAME.textContent = "Date Modified";
+      sortTheSongs.classList.remove("showBlockProfile");
+    }
+    //////////////
+    setTimeout(() => {
+      e.classList.remove("clickAnimation");
+    }, 100);
+
+    e.classList.add("clickAnimation");
+  });
+});
+
+//////////////////////////////////////
+const oneFolder = document.querySelectorAll(".insinde");
+oneFolder.forEach((e) => {
+  e.addEventListener("click", () => {
+    seeAllPageSage.classList.add("showBlockProfile");
+  });
+});
+//////////////////////////////////////
+const songHlf = document.querySelectorAll(".songHlf");
+const songyso = document.querySelector(".songyso");
+const goesDown = document.querySelector(".goesDown");
+songHlf.forEach((e) => {
+  e.addEventListener("click", () => {
+    songyso.classList.add("showBlockProfile");
+  });
+});
+goesDown.addEventListener("click", () => {
+  songyso.classList.remove("showBlockProfile");
+});
+//////////////////////////////////////
+const theFirstWord = document.querySelector(".theFirstWord");
+const Stop = document.querySelector(".stop");
+const icon = Stop.querySelector("i");
+const AddToFavorit = document.querySelector(".AddToFavorit");
+const FavIcon = AddToFavorit.querySelector("i");
+const song = document.getElementById("jeTeLaisserai");
+const TimeLine = document.querySelector(".timeline");
+const TimePassOfSong = document.querySelector(".TimePassOfSong");
+const TimeOfSong = document.querySelector(".TimeOfSong");
+const duration = song.duration;
+const minutes = Math.floor(duration / 60);
+const seconds = Math.floor(duration % 60);
+const formattedTime = `${minutes.toString().padStart(2, "0")}:${seconds
+  .toString()
+  .padStart(2, "0")}`;
+// TimePassOfSong.textContent = formattedTime;
+const Icons = (fax, ChangeIcon, SecondIcon, Elements, ratio1, song) => {
+  if (fax.classList.contains(ChangeIcon)) {
+    fax.classList.remove(ChangeIcon);
+    fax.classList.add(SecondIcon);
+    // song.play();
+  } else {
+    fax.classList.remove(SecondIcon);
+    fax.classList.add(ChangeIcon);
+    // song.pause();
+  }
+  Elements.style.transform = `scale(${ratio1})`;
+
+  setTimeout(() => {
+    Elements.style.transform = `scale(1)`;
+  }, 300);
+};
+const playSong = (fax, ChangeIcon) => {
+  if (fax.classList.contains(ChangeIcon)) {
+    song.pause();
+  } else {
+    song.play();
+  }
+};
+song.addEventListener("timeupdate", () => {
+  const currentTime = song.currentTime;
+  const min = Math.floor(currentTime / 60);
+  const sec = Math.floor(currentTime % 60);
+  const formatted = `${min.toString().padStart(2, "0")}:${sec
+    .toString()
+    .padStart(2, "0")}`;
+  TimeOfSong.textContent = formatted;
+  const duration = song.duration;
+  const progress = (currentTime / duration) * 100;
+  TimeLine.style.width = progress + "%";
+});
+
+Stop.addEventListener("click", (e) => {
+  Icons(icon, "fa-play", "fa-pause", Stop, 1.05, song);
+  playSong(icon, "fa-play");
+});
+AddToFavorit.addEventListener("click", (e) => {
+  Icons(FavIcon, "fa-regular", "fa-solid", AddToFavorit, 1.2, song);
+});
