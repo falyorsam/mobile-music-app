@@ -694,7 +694,7 @@
 .cover {
   background-color: #d4d4da;
   height: 200px;
-  background-image: url("./../../resurses/tumblr_poh86sUujc1wpedbpo3_1280.jpg");
+  background-image: url("./../resurses/tumblr_poh86sUujc1wpedbpo3_1280.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -711,7 +711,7 @@
   position: relative;
   top: -78px;
   right: 0;
-  background-image: url("./../../resurses/dba3bd35a82cdc8d7450d6c0a0080d78.png");
+  background-image: url("./../resurses/dba3bd35a82cdc8d7450d6c0a0080d78.png");
   background-position: center 0px;
   background-repeat: no-repeat;
   background-size: cover;
