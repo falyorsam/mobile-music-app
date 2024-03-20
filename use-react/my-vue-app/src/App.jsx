@@ -1,28 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+//////////////////////////////
+import SideBar from "./1-music-app/6-side-nav/SideNav.jsx";
+import Page from "./z-page/page.jsx";
 import "./App.css";
-import useSound from "use-sound";
-import Nav from "./assets/song-place/1-nav";
-import jeTe from "./resurses/JeTai.mp3";
-import JeTai from "./resurses/JeTai.mp3";
-import All from "./assets/All";
-import Body from "./assets/song-place/2-body";
-import Main from "./assets-main/body/body.jsx";
+import MyContext from "./z-page/UseContextComp.jsx";
+import { useEffect, useRef, useState } from "react";
+//////////////////////////////
+// console.log();
 function App() {
-  const [sep, setSpe] = useState(false);
+  const [rate, setRate] = useState(-0);
+  const AddMe = () => {
+    setRate(rate * 2);
+  };
+
   return (
     <div>
-      <button
-        onClick={() => {
-          setSpe(!sep);
-        }}
-      >
-        click to check
-      </button>
-      {/* <Nav></Nav>
-      <Container></Container>
-      <Footer></Footer> */}
-      {/* {sep ? <All></All> : <Main></Main>} */}
-      <Main></Main>
+      <MyContext.Provider value={rate}>
+        <Page ratio={rate} />
+      </MyContext.Provider>
     </div>
   );
 }
