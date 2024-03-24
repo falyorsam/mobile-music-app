@@ -1,6 +1,6 @@
-const Search = () => {
+const Search = ({ styles, handleClick, info }) => {
   return (
-    <div className="search-sage">
+    <div style={styles} className="search-sage">
       <div className="searchBar">
         <div className="searchsy">
           <div className="divInput">
@@ -13,7 +13,14 @@ const Search = () => {
             </div>
           </div>
         </div>
-        <div className="close-searchBar">cancel</div>
+        <div
+          className="close-searchBar"
+          onClick={() => {
+            handleClick();
+          }}
+        >
+          cancel
+        </div>
       </div>
       <div className="empty"></div>
     </div>

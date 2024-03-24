@@ -1,13 +1,20 @@
 import React from "react";
 
-const SuggestedPage = () => {
+const SuggestedPage = ({ handleClick, styles }) => {
   return (
     <div className="page" id="page1">
       <main className="container">
         <div className="ResentContainer">
           <div className="resentPlayed countSong-date">
             <div className="resentText countSong">recently played</div>
-            <div className="seeALl sort">See all</div>
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="seeALl sort"
+            >
+              See all
+            </div>
           </div>
           <div className="musicScroll">
             <div className="OneMusic">
@@ -89,7 +96,14 @@ const SuggestedPage = () => {
         <div className="mostPlayedContainer">
           <div className="mostPlayed countSong-date">
             <div className="mostPlayedText countSong">Most Played</div>
-            <div className="seeALl sort">SEE ALL</div>
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="seeALl sort"
+            >
+              SEE ALL
+            </div>
           </div>
           <div className="musicScroll">
             <div className="OneMusic">
@@ -171,7 +185,14 @@ const SuggestedPage = () => {
         <div className="favoriteContainer">
           <div className="favoriteC  countSong-date ">
             <div className="favoritText countSong">favorite</div>
-            <div className="seeALl sort">SEE ALL</div>
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="seeALl sort"
+            >
+              SEE ALL
+            </div>
           </div>
           <div className="musicScroll">
             <div className="OneMusic">
@@ -222,7 +243,14 @@ const SuggestedPage = () => {
         <div className="containerD">
           <div className="countSong-date">
             <div className="countSong">last added</div>
-            <div className="seeALl sort">SEE ALL</div>
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="seeALl sort"
+            >
+              SEE ALL
+            </div>
           </div>
           <div className="songScroll">
             <div className="firstScrollPage">

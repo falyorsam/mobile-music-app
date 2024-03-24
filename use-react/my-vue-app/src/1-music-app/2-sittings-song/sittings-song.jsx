@@ -1,11 +1,15 @@
-const SittingsSong = () => {
+const SittingsSong = ({ handleClick, styles, info }) => {
   return (
-    <div className="sittings-sage">
-      <div className="cancelSittingsSage"></div>
+    <div style={styles} className="sittings-sage">
+      <div
+        onClick={() => {
+          handleClick();
+        }}
+        className="cancelSittingsSage"
+      ></div>
       <div className="sittingsSageContFor">
         <div className="songContainer">
           <div className="songHlf">
-            `
             <img
               className="songPic"
               src="https://picsum.photos/200"

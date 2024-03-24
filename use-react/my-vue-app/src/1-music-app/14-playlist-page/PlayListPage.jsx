@@ -1,10 +1,15 @@
-const PlayListPage = () => {
+const PlayListPage = ({ handleClick }) => {
   return (
     <div className="page" id="page5">
       <div className="container">
         <div className="fourCont">
           <div className="towC">
-            <div className="mostP">
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="mostP"
+            >
               <div className="insideSong">
                 <div className="MostText">
                   <div className="firstText">Most Played</div>
@@ -18,7 +23,12 @@ const PlayListPage = () => {
                 alt="songPic"
               />
             </div>
-            <div className="lastA">
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="lastA"
+            >
               <div className="insideSong">
                 <div className="MostText">
                   <div className="firstText">Most Played</div>
@@ -34,7 +44,12 @@ const PlayListPage = () => {
             </div>
           </div>
           <div className="towC">
-            <div className="recentlyP">
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="recentlyP"
+            >
               <div className="insideSong">
                 <div className="MostText">
                   <div className="firstText">Most Played</div>
@@ -48,7 +63,12 @@ const PlayListPage = () => {
                 alt="songPic"
               />
             </div>
-            <div className="favoritesP">
+            <div
+              onClick={() => {
+                handleClick();
+              }}
+              className="favoritesP"
+            >
               <div className="insideSong">
                 <div className="MostText">
                   <div className="firstText">Most Played</div>

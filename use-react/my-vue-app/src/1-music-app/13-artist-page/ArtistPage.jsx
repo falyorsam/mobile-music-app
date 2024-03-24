@@ -1,9 +1,14 @@
-const ArtistPage = () => {
+const ArtistPage = ({ handleClick, handleSittings }) => {
   return (
     <div className="page" id="page4">
       <div className="container">
         <div className="songContainer">
-          <div className="songHlf">
+          <div
+            onClick={() => {
+              handleClick();
+            }}
+            className="songHlf"
+          >
             <img
               className="songPicalbum"
               src="https://picsum.photos/200"
@@ -19,7 +24,12 @@ const ArtistPage = () => {
               </div>
             </div>
           </div>
-          <div className="songSittings">
+          <div
+            onClick={() => {
+              handleSittings();
+            }}
+            className="songSittings"
+          >
             <i className="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>

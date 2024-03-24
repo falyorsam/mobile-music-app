@@ -1,7 +1,13 @@
-const Sort = () => {
+const Sort = ({ style, handleClick }) => {
+  console.log(style);
   return (
-    <div className="sortTheSongs">
-      <div className="closeSort"></div>
+    <div style={style} className="sortTheSongs">
+      <div
+        onClick={() => {
+          handleClick();
+        }}
+        className="closeSort"
+      ></div>
       <div className="SortSongCont">
         <div className="sortOrder">sort order</div>
         <div className="SortBy">

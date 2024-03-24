@@ -1,8 +1,13 @@
-const SittingsNav = () => {
+const SittingsNav = ({ style, handleClick }) => {
   return (
-    <div className="navSittingBox">
+    <div style={style} className="navSittingBox">
       <div className="flexContainer">
-        <div className="justForFlex removeIT"></div>
+        <div
+          onClick={() => {
+            handleClick();
+          }}
+          className="justForFlex removeIT"
+        ></div>
         <div className="sittings3box">
           <div className="sittingsOneBox">shuffle all</div>
           <div className="sittingsOneBox">
@@ -12,7 +17,12 @@ const SittingsNav = () => {
           <div className="sittingsOneBox">sittings</div>
         </div>
       </div>
-      <div className="forFlexAlso removeIT"></div>
+      <div
+        onClick={() => {
+          handleClick();
+        }}
+        className="forFlexAlso removeIT"
+      ></div>
     </div>
   );
 };

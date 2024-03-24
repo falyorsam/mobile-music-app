@@ -453,10 +453,9 @@
   transform: translateY(-10000px);
   position: absolute;
   z-index: 2;
-  display: none;
-  top: -25px;
   width: 375px;
   height: 100vh;
+  transition: 0.25s transform;
 }
 .showBlockDown {
   display: block;
@@ -1367,4 +1366,84 @@ html {
 }
 .profile-sage {
   transform: translateY(0px);
+}
+.audioNavSideBar,
+.search-sage,
+.sittings-sage,
+.navSittingBox,
+.seeAllPage-sage {
+  z-index: 3;
+}
+/* {
+  z-index: 2;
+} */
+.songInfo1 {
+  width: 200px;
+  overflow-x: hidden;
+}
+.songInfo2 {
+  width: 150px;
+}
+.songNameText {
+  transform: translateX(10%);
+  animation: textAnimation infinite 10s ease-in-out;
+}
+@keyframes textAnimation {
+  0% {
+    transform: translateX(-0%);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(-20%);
+  }
+  30% {
+    transform: translateX(-30%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(-60%);
+  }
+  70% {
+    transform: translateX(-70%);
+  }
+  80% {
+    transform: translateX(-80%);
+  }
+  90% {
+    transform: translateX(-90%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.songContainers {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  text-wrap: nowrap;
+}
+.containerSortIt {
+  height: 63vh;
+  overflow-y: auto;
+}
+.containerSortIt::-webkit-scrollbar {
+  display: none;
+}
+.sittings-sage {
+  z-index: 0;
+  display: block;
+  position: fixed;
+  right: 0px;
+  transition: transform 0.25s ease-in-out;
+  .sittingsSageContFor {
+    width: 100%;
+  }
 }

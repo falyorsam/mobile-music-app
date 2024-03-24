@@ -1,6 +1,6 @@
-const SideNav = () => {
+const SideNav = ({ handleClick, styles }) => {
   return (
-    <div className="audioNavSideBar">
+    <div style={styles} className="audioNavSideBar">
       <div className="sideBar">
         <div className="sideBar-5 pd-0">
           <div className="audiofirst">
@@ -110,7 +110,12 @@ const SideNav = () => {
           </div>
         </div>
       </div>
-      <div className="closeSideBar"></div>
+      <div
+        onClick={() => {
+          handleClick();
+        }}
+        className="closeSideBar"
+      ></div>
     </div>
   );
 };

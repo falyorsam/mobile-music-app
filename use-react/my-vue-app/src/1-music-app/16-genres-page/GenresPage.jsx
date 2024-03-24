@@ -1,8 +1,13 @@
-const SittingsSong = () => {
+const SittingsSong = ({ handleClick }) => {
   return (
     <div className="page" id="page7">
       <div className="container">
-        <div className="geme">
+        <div
+          onClick={() => {
+            handleClick();
+          }}
+          className="geme"
+        >
           <div className="insideTheGENE">
             <div>
               <i className="fa-solid fa-guitar"></i>
